@@ -1,5 +1,6 @@
 ﻿using System;
 using RacingApp.Models;
+using RacingApp.View;
 using RacingApp.ViewModels;
 
 namespace RacingApp
@@ -10,9 +11,13 @@ namespace RacingApp
     {
         static void Main()
         {
-            RouteViewModel routeViewModel = new RouteViewModel();
-            routeViewModel.Move();
-            Console.ReadLine();
+            MainView mainView = new MainView();
+            mainView.StartView();
+            Console.ReadKey();
+
+
+            
+     
 
         }
     }

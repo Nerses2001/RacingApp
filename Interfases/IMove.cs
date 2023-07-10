@@ -1,10 +1,10 @@
-﻿
+﻿using System;
 
 namespace RacingApp.Interfases
 {
-    internal interface IMoveRoute
+    internal interface IMove
     {
         void Move();
-
+    
     }
 }
