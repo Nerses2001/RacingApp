@@ -12,6 +12,7 @@ namespace RacingApp.ViewModels
 
 
         public bool GameOver => _gameOver;
+        public Car Car => _car;
         
 
 

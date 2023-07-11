@@ -22,20 +22,26 @@ namespace RacingApp.View
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine($"User name is {_user.UserName}, Id is {_user.UserId} Car name is {_kConsole.KConsole.CarName}");
+            Console.WriteLine($"User name is {_user.UserName}, Id is {_user.UserId} Car name is {_carViewModel.Car.CarName}");
         
             int tmp = _routeViewModel.Left;
+            _kConsole.WinAndEndGame();
             while (!_carViewModel.GameOver) 
             {
                 _routeViewModel.Move();
                 _routeViewModel.ChangeColor(ref tmp);
                 _carViewModel.Move();
             }
+       
 
-            Console.Clear();
-            Console.BackgroundColor = ConsoleColor.DarkGreen;
-            Console.ForegroundColor= ConsoleColor.DarkRed;
-            Console.WriteLine("GAME OVER !!!");
+            if (_carViewModel.GameOver) 
+            {
+                Console.Clear();
+                Console.BackgroundColor = ConsoleColor.DarkGreen;
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("GAME OVER !!!");
+
+            }
         }
 
 

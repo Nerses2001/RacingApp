@@ -10,5 +10,7 @@ namespace RacingApp.Interfases
 
         void StartGame(bool start);
 
+        void WinAndEndGame();
+
     }
 }
